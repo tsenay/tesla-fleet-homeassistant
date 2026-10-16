@@ -63,6 +63,17 @@ cars:
     prefix: ""
 ```
 
+```yaml
+type: custom:tesla-fleet-card
+cars:
+  - name: Model Y
+    model: Model Y
+    paint: grey
+    prefix: garage_model_y
+    generation: juniper
+
+```
+
 ## What you get
 
 - **Home view** - your car resting, like the app's opening screen. Plugging in

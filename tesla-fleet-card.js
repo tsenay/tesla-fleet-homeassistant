@@ -3,8 +3,8 @@
    Works with both the tesla_custom (HACS) and official tesla_fleet
    integrations - auto-detected per car.
    Install guide, all options, and the image-pack spec live in the README:
-   https://github.com/MrNickIE/tesla-fleet-homeassistant
-   Built by Claude in conversation with MrNickIE - MIT licence, share freely. */
+   https://github.com/tsenay/tesla-fleet-homeassistant
+   Built by Claude in conversation with tsenay - MIT licence, share freely. */
 (function () {
   "use strict";
 
@@ -1719,7 +1719,7 @@
       // plain push. hacsfiles LAST: HACS only manages the JS file for
       // dashboard plugins and never updates or removes an images tree it once
       // laid down, so anything found there is likely stale.
-      const REPO_ROOTS = ["https://raw.githubusercontent.com/MrNickIE/tesla-fleet-homeassistant/main/images/",
+      const REPO_ROOTS = ["https://raw.githubusercontent.com/tsenay/tesla-fleet-homeassistant/main/images/",
                           "/hacsfiles/tesla-fleet-homeassistant/images/"];
       const roots = ["/local/tesla-fleet-card/images/", REPO_ROOTS[0], REPO_ROOTS[1]];
       /* A generation-qualified pack wins if one exists, so dropping
@@ -3065,7 +3065,7 @@
   <div class="noPackPath">${path}</div>
   <div class="noPackBody">A pack is seven photos from the Tesla app. If you own this car,
     you are the right person to build one -
-    <a class="packCta" href="https://github.com/MrNickIE/tesla-fleet-homeassistant#contributing-an-image-pack" target="_blank" rel="noopener">contribute a pack</a>.</div>
+    <a class="packCta" href="https://github.com/tsenay/tesla-fleet-homeassistant#contributing-an-image-pack" target="_blank" rel="noopener">contribute a pack</a>.</div>
 </div>`;
     }
 
