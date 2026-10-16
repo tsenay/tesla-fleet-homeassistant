@@ -65,13 +65,14 @@ cars:
     prefix: ""
 ```
 
+Example for a Y Juniper Grey
 ```yaml
 type: custom:tesla-fleet-card
 cars:
   - name: Model Y
     model: Model Y
     paint: grey
-    prefix: garage_model_y
+    prefix: model_y
     generation: juniper
 
 ```
@@ -162,6 +163,8 @@ a paint:
 | `models/y/red/app` | Model Y | pre-refresh |
 | `models/y/white/app` | Model Y | Juniper, the 2025 refresh |
 | `models/y-juniper/blue/app` | Model Y | Juniper, the 2025 refresh |
+| `models/y-juniper/grey/app` | Model Y | Juniper, the 2025 refresh |
+| `models/y-juniper/red/app` | Model Y | Juniper, the 2025 refresh |
 | `models/3/grey/app` | Model 3 | Highland, the 2024 refresh |
 
 The card works out which generation your car is from the model year, which it
@@ -174,10 +177,12 @@ not, and a 2023 could be either. The card does not guess at a 2023; set
 sure.
 
 A pack at a generation-qualified path wins if one exists, so
-`models/y-juniper/red/app` in this repository or in your own
-`/config/www/tesla-fleet-card/images/` is all it takes to serve a Juniper red
-Model Y properly. **Contributions of the missing combinations are very
-welcome** - see below.
+`models/y-juniper/black/app` in this repository or in your own
+`/config/www/tesla-fleet-card/images/` is all it takes to serve a Juniper black
+Model Y properly. The Juniper Model Y currently ships in **blue, grey and red**;
+white rides along at the historical `models/y/white/app`. Black, silver and the
+rest are still missing - **contributions of the missing combinations are very
+welcome**, see below.
 
 **If the only pack in your paint is the other generation's, the card will not
 use it.** It knows which generation each pack in this repository is, so serving
