@@ -16,7 +16,7 @@ const fs = require("fs");
 const path = require("path");
 const { chromium } = require("playwright");
 
-const CARD = path.join(__dirname, "..", "tesla-fleet-card.js");
+const CARD = path.join(__dirname, "..", "dist", "tesla-fleet-card.js");
 
 /* Every pack the card says it ships, read out of PACKS_SHIPPED in the source
    rather than retyped here, so a pack added later is covered by the
@@ -1031,7 +1031,7 @@ function customStates(p) {
     const HIGHLAND = "LRW3F7FS5RC043917";   /* 2024 */
     const CLASSIC = "LRW3F7FR3NC609256";    /* 2022 */
 
-    serveOnly("raw.githubusercontent.com/MrNickIE/tesla-fleet-homeassistant/main/images/models/3/grey/app/");
+    serveOnly("raw.githubusercontent.com/tsenay/tesla-fleet-homeassistant/main/dist/images/models/3/grey/app/");
     /* the Highland pack is the right car for a Highland, so use it */
     R.pack_highland_gets_pack = await render(
       Object.assign({ name: "H", prefix: "h_" }, M3), HIGHLAND);
@@ -1055,7 +1055,7 @@ function customStates(p) {
        did nothing at all on any real multi-car card. A single-car fixture
        cannot see this: this._car and the car being probed are the same object.
        So this fixture has two cars, and asks about the one NOT selected. */
-    serveOnly("raw.githubusercontent.com/MrNickIE/tesla-fleet-homeassistant/main/images/models/3/grey/app/");
+    serveOnly("raw.githubusercontent.com/tsenay/tesla-fleet-homeassistant/main/dist/images/models/3/grey/app/");
     (() => {
       const mk = () => {
         const c = document.createElement("tesla-fleet-card");

@@ -34,9 +34,11 @@ Works with **both** Tesla integrations, automatically:
    **Resources** for `/hacsfiles/tesla-fleet-homeassistant/tesla-fleet-card.js`
    (type *module*) and add it if missing.
 
-**Manual install:** copy `tesla-fleet-card.js` to `/config/www/`, add a
+**Manual install:** copy `dist/tesla-fleet-card.js` to `/config/www/`, add a
 dashboard resource `/local/tesla-fleet-card.js` (type *module*), and bump a
-`?v=` query string on that URL every time you update the file.
+`?v=` query string on that URL every time you update the file. For the bundled
+image packs to work with a manual install, copy the whole `dist/` folder
+(keeping its `images/` subfolder) rather than just the `.js`.
 
 ## Quick start
 
