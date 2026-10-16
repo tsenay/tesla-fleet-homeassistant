@@ -336,6 +336,8 @@
     "models/y/red/app":          { angle: -21.9, lines: [[93.3, 2.2]] },
     "models/y/white/app":        Y_JUNIPER_SIDE.road,
     "models/y-juniper/blue/app": Y_JUNIPER_SIDE.road,
+    "models/y-juniper/grey/app": Y_JUNIPER_SIDE.road,
+    "models/y-juniper/red/app":  Y_JUNIPER_SIDE.road,
     "models/3/grey/app":         { angle: -21.8, lines: [[103.1, 2.3]] }
   };
   /* An unmeasured photo still gets a marking: the measured car box's bottom
@@ -479,6 +481,8 @@
                                    rear: [185.2, 47.8, 0.85] },
     "models/y/white/app":        Y_JUNIPER_SIDE.wheels,
     "models/y-juniper/blue/app": Y_JUNIPER_SIDE.wheels,
+    "models/y-juniper/grey/app": Y_JUNIPER_SIDE.wheels,
+    "models/y-juniper/red/app":  Y_JUNIPER_SIDE.wheels,
     "models/3/grey/app":         { lift: 1.06, front: [107.4, 86.3, 15.80, 10.74, 95.7],
                                    rear: [191.4, 54.4, 0.86] }
   };
@@ -646,6 +650,8 @@
     { model: "Model Y", paint: "red", dir: "models/y/red/app", gen: "classic" },
     { model: "Model Y", paint: "white", dir: "models/y/white/app", gen: "juniper" },
     { model: "Model Y", paint: "blue", dir: "models/y-juniper/blue/app", gen: "juniper" },
+    { model: "Model Y", paint: "grey", dir: "models/y-juniper/grey/app", gen: "juniper" },
+    { model: "Model Y", paint: "red", dir: "models/y-juniper/red/app", gen: "juniper" },
     { model: "Model 3", paint: "grey", dir: "models/3/grey/app", gen: "highland" }
   ];
   const GEN_LABEL = { classic: "pre-refresh", juniper: "Juniper (2025 refresh)",
@@ -775,7 +781,9 @@
     "models/3/grey/app":       [61, 461],
     "models/y/red/app":        [44, 501],
     "models/y/white/app":      [56, 477],
-    "models/y-juniper/blue/app": [60, 499]
+    "models/y-juniper/blue/app": [60, 499],
+    "models/y-juniper/grey/app": [60, 499],
+    "models/y-juniper/red/app":  [60, 499]
   };
 
   const PACK_CABLE_PATH = {
@@ -795,6 +803,8 @@
       "C 134.2 53.8 135.8 52.5 136.3 52.0",
     "models/y/white/app":        Y_JUNIPER_SIDE.cable,
     "models/y-juniper/blue/app": Y_JUNIPER_SIDE.cable,
+    "models/y-juniper/grey/app": Y_JUNIPER_SIDE.cable,
+    "models/y-juniper/red/app":  Y_JUNIPER_SIDE.cable,
     "models/y/red/app":
       "M 74.8 93.3 C 75.7 93.1 78.1 92.5 79.8 92.1 C 81.4 91.7 83.1 91.4 84.8 91.0 " +
       "C 86.4 90.7 88.1 90.4 89.8 90.1 C 91.5 89.8 93.1 89.5 94.8 89.2 " +
@@ -1719,7 +1729,7 @@
       // plain push. hacsfiles LAST: HACS only manages the JS file for
       // dashboard plugins and never updates or removes an images tree it once
       // laid down, so anything found there is likely stale.
-      const REPO_ROOTS = ["https://raw.githubusercontent.com/tsenay/tesla-fleet-homeassistant/main/images/",
+      const REPO_ROOTS = ["https://raw.githubusercontent.com/tsenay/tesla-fleet-homeassistant/main/dist/images/",
                           "/hacsfiles/tesla-fleet-homeassistant/images/"];
       const roots = ["/local/tesla-fleet-card/images/", REPO_ROOTS[0], REPO_ROOTS[1]];
       /* A generation-qualified pack wins if one exists, so dropping
